@@ -24,7 +24,7 @@ export default class Default extends React.Component {
             {`
             <DatePicker
                 selected={this.state.startDate}
-                startOnSunday
+                startOnMonday
                 placeholderText='Weeks start on Sunday'
                 onChange={this.handleChange}
             />

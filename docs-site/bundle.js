@@ -7090,6 +7090,320 @@
                   _default2.default,
                   null
                 )
+              },
+              {
+                title: "Select Time",
+                component: _react2.default.createElement(
+                  _show_time2.default,
+                  null
+                )
+              },
+              {
+                title: "Exclude Times",
+                component: _react2.default.createElement(
+                  _exclude_times2.default,
+                  null
+                )
+              },
+              {
+                title: "Include Times",
+                component: _react2.default.createElement(
+                  _include_times2.default,
+                  null
+                )
+              },
+              {
+                title: "Specific Time Range",
+                component: _react2.default.createElement(
+                  _exclude_time_period2.default,
+                  null
+                )
+              },
+              {
+                title: "Custom date format",
+                component: _react2.default.createElement(
+                  _custom_date_format2.default,
+                  null
+                )
+              },
+              {
+                title: "Custom class name",
+                component: _react2.default.createElement(
+                  _custom_class_name2.default,
+                  null
+                )
+              },
+              {
+                title: "Custom calendar class name",
+                component: _react2.default.createElement(
+                  _custom_calendar_class_name2.default,
+                  null
+                )
+              },
+              {
+                title: "Custom day class names",
+                component: _react2.default.createElement(
+                  _custom_day_class_names2.default,
+                  null
+                )
+              },
+              {
+                title: "Today button",
+                component: _react2.default.createElement(_today2.default, null)
+              },
+              {
+                title: "TimeZone date",
+                component: _react2.default.createElement(
+                  _timezone_date2.default,
+                  null
+                )
+              },
+              {
+                title: "Placeholder text",
+                component: _react2.default.createElement(
+                  _placeholder_text2.default,
+                  null
+                )
+              },
+              {
+                title: "Specific date range",
+                component: _react2.default.createElement(
+                  _specific_date_range2.default,
+                  null
+                )
+              },
+              {
+                title: "Date Range with disabled navigation shown",
+                component: _react2.default.createElement(
+                  _date_range_with_show_disabled_navigation2.default,
+                  null
+                )
+              },
+              {
+                title: "Locale",
+                component: _react2.default.createElement(_locale2.default, null)
+              },
+              {
+                title: "Exclude dates",
+                component: _react2.default.createElement(
+                  _exclude_dates2.default,
+                  null
+                )
+              },
+              {
+                title: "Highlight dates",
+                component: _react2.default.createElement(
+                  _highlight_dates2.default,
+                  null
+                )
+              },
+              {
+                title: "Highlight dates with custom class names and ranges",
+                component: _react2.default.createElement(
+                  _highlight_dates_with_ranges2.default,
+                  null
+                )
+              },
+              {
+                title: "Include dates",
+                component: _react2.default.createElement(
+                  _include_dates2.default,
+                  null
+                )
+              },
+              {
+                title: "Filter dates",
+                component: _react2.default.createElement(
+                  _filter_dates2.default,
+                  null
+                )
+              },
+              {
+                title: "Date Range",
+                component: _react2.default.createElement(
+                  _date_range2.default,
+                  null
+                )
+              },
+              {
+                title: "Disable datepicker",
+                component: _react2.default.createElement(
+                  _disabled2.default,
+                  null
+                )
+              },
+              {
+                title: "Disable keyboard navigation",
+                component: _react2.default.createElement(
+                  _disabled_keyboard_navigation2.default,
+                  null
+                )
+              },
+              {
+                title: "Clear datepicker input",
+                component: _react2.default.createElement(
+                  _clear_input2.default,
+                  null
+                )
+              },
+              {
+                title: "onBlur callbacks in console",
+                component: _react2.default.createElement(
+                  _on_blur_callbacks2.default,
+                  null
+                )
+              },
+              {
+                title: "Configure Popper Properties",
+                component: _react2.default.createElement(
+                  _configurePopper2.default,
+                  null
+                )
+              },
+              {
+                title: "Portal version",
+                component: _react2.default.createElement(_portal2.default, null)
+              },
+              {
+                title: "Inline portal version",
+                component: _react2.default.createElement(
+                  _inline_portal2.default,
+                  null
+                )
+              },
+              {
+                title: "TabIndex",
+                component: _react2.default.createElement(
+                  _tab_index2.default,
+                  null
+                )
+              },
+              {
+                title: "Year dropdown",
+                component: _react2.default.createElement(
+                  _year_dropdown2.default,
+                  null
+                )
+              },
+              {
+                title: "Month dropdown",
+                component: _react2.default.createElement(
+                  _month_dropdown2.default,
+                  null
+                )
+              },
+              {
+                title: "Month dropdown short month",
+                component: _react2.default.createElement(
+                  _month_dropdown_short2.default,
+                  null
+                )
+              },
+              {
+                title: "MonthYear dropdown",
+                component: _react2.default.createElement(
+                  _month_year_dropdown2.default,
+                  null
+                )
+              },
+              {
+                title: "Year select dropdown",
+                component: _react2.default.createElement(
+                  _year_select_dropdown2.default,
+                  null
+                )
+              },
+              {
+                title: "Month Year Slide",
+                component: _react2.default.createElement(
+                  _month_year_slide2.default,
+                  null
+                )
+              },
+              {
+                title: "Weekly",
+                component: _react2.default.createElement(_weekly2.default, null)
+              },
+              {
+                title: "Monthly",
+                component: _react2.default.createElement(
+                  _monthly2.default,
+                  null
+                )
+              },
+              {
+                title: "Inline version",
+                component: _react2.default.createElement(_inline2.default, null)
+              },
+              {
+                title: "Open to date",
+                component: _react2.default.createElement(
+                  _open_to_date2.default,
+                  null
+                )
+              },
+              {
+                title: "Fixed height of Calendar",
+                component: _react2.default.createElement(
+                  _fixed_calendar2.default,
+                  null
+                )
+              },
+              {
+                title: "Display Week Numbers",
+                component: _react2.default.createElement(
+                  _week_numbers2.default,
+                  null
+                )
+              },
+              {
+                title: "Custom input",
+                component: _react2.default.createElement(
+                  _custom_input2.default,
+                  null
+                )
+              },
+              {
+                title: "Multiple months",
+                component: _react2.default.createElement(
+                  _multi_month2.default,
+                  null
+                )
+              },
+              {
+                title: "Multiple months with year dropdown",
+                component: _react2.default.createElement(
+                  _multi_month_drp2.default,
+                  null
+                )
+              },
+              {
+                title: "Children",
+                component: _react2.default.createElement(
+                  _children2.default,
+                  null
+                )
+              },
+              {
+                title: "Get raw input value on change",
+                component: _react2.default.createElement(
+                  _raw_change2.default,
+                  null
+                )
+              },
+              {
+                title: "Don't hide calendar on date selection",
+                component: _react2.default.createElement(
+                  _dont_close_onSelect2.default,
+                  null
+                )
+              },
+              {
+                title: "Open calendar by default",
+                component: _react2.default.createElement(
+                  _open_by_default2.default,
+                  null
+                )
               }
             ]),
             (_this.renderExamples = function() {
@@ -25843,8 +26157,8 @@
               { className: "column" },
               _react2.default.createElement(_reactDatepicker2.default, {
                 selected: this.state.startDate,
-                // startOnSunday
-                locale: "en",
+                startOnMonday: true,
+                locale: "en-gb",
                 placeholderText: "Weeks starts on Sunday",
                 onChange: this.handleChange
               })
@@ -26381,7 +26695,7 @@
                 showMonthYearDropdown: _this.props.showMonthYearDropdown,
                 showWeekNumbers: _this.props.showWeekNumbers,
                 showYearDropdown: _this.props.showYearDropdown,
-                startOnSunday: _this.props.startOnSunday,
+                startOnMonday: _this.props.startOnMonday,
                 monthYearSlide: _this.props.monthYearSlide,
                 showMonthly: _this.props.showMonthly,
                 withPortal: _this.props.withPortal,
@@ -26633,7 +26947,7 @@
         showDisabledMonthNavigation: _propTypes2.default.bool,
         startDate: _propTypes2.default.object,
         startOpen: _propTypes2.default.bool,
-        startOnSunday: _propTypes2.default.bool,
+        startOnMonday: _propTypes2.default.bool,
         tabIndex: _propTypes2.default.number,
         timeCaption: _propTypes2.default.string,
         title: _propTypes2.default.string,
@@ -27017,11 +27331,9 @@
               (0, _date_utils.cloneDate)(date)
             );
 
-            if (!_this.props.startOnSunday) {
-              startOfWeek.add(1, "day");
+            if (_this.props.startOnMonday) {
+              (0, _date_utils.toMonday)(startOfWeek);
             }
-
-            console.log(startOfWeek);
 
             var dayNames = [];
             if (_this.props.showWeekNumbers) {
@@ -27478,7 +27790,7 @@
                       selectsStart: _this.props.selectsStart,
                       selectsEnd: _this.props.selectsEnd,
                       showWeekNumbers: _this.props.showWeekNumbers,
-                      startOnSunday: _this.props.startOnSunday,
+                      startOnMonday: _this.props.startOnMonday,
                       startDate: _this.props.startDate,
                       endDate: _this.props.endDate,
                       peekNextMonth: _this.props.peekNextMonth,
@@ -27640,7 +27952,7 @@
         showMonthYearDropdown: _propTypes2.default.bool,
         showWeekNumbers: _propTypes2.default.bool,
         showYearDropdown: _propTypes2.default.bool,
-        startOnSunday: _propTypes2.default.bool,
+        startOnMonday: _propTypes2.default.bool,
         monthYearSlide: _propTypes2.default.bool,
         showMonthly: _propTypes2.default.bool,
         startDate: _propTypes2.default.object,
@@ -47138,6 +47450,7 @@
       exports.getEffectiveMinDate = getEffectiveMinDate;
       exports.getEffectiveMaxDate = getEffectiveMaxDate;
       exports.getHightLightDaysMap = getHightLightDaysMap;
+      exports.toMonday = toMonday;
 
       var _moment = __webpack_require__(200);
 
@@ -47691,6 +48004,18 @@
         }
 
         return dateClasses;
+      }
+
+      function toMonday(date) {
+        if (date.format("dddd") === "Tuesday") {
+          return date.subtract(1, "day");
+        }
+
+        if (date.format("dddd") === "Sunday") {
+          return date.add(1, "day");
+        }
+
+        return date;
       }
 
       /***/
@@ -48997,8 +49322,8 @@
                 utils.getStartOfMonth(utils.cloneDate(_this.props.day))
               );
 
-              if (!_this.props.startOnSunday) {
-                currentWeekStart.add(1, "day");
+              if (_this.props.startOnMonday) {
+                (0, _date_utils.toMonday)(currentWeekStart);
               }
 
               var i = 0;
@@ -49118,7 +49443,7 @@
         selectsEnd: _propTypes2.default.bool,
         selectsStart: _propTypes2.default.bool,
         showWeekNumbers: _propTypes2.default.bool,
-        startOnSunday: _propTypes2.default.bool,
+        startOnMonday: _propTypes2.default.bool,
         startDate: _propTypes2.default.object,
         utcOffset: _propTypes2.default.number,
         weeklyType: _propTypes2.default.bool,
