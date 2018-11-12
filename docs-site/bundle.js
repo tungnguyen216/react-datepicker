@@ -27321,6 +27321,14 @@
             );
           };
 
+          _this.isLocaleEn = function() {
+            return (
+              typeof _this.props.locale === "string" &&
+              (_this.props.locale.toLowerCase() === "en-gb" ||
+                _this.props.locale.toLowerCase() === "en")
+            );
+          };
+
           _this.header = function() {
             var date =
               arguments.length > 0 && arguments[0] !== undefined
@@ -27331,7 +27339,12 @@
               (0, _date_utils.cloneDate)(date)
             ).add(1, "day");
 
-            if (_this.props.startOnSunday) {
+            if (
+              _this.props.startOnSunday ||
+              (typeof _this.props.locale === "string" &&
+                (_this.props.locale.toLowerCase() === "en-gb" ||
+                  _this.props.locale.toLowerCase() === "en"))
+            ) {
               startOfWeek.subtract(1, "day");
             }
 
@@ -49311,7 +49324,12 @@
                 )
                 .add(1, "day");
 
-              if (_this.props.startOnSunday) {
+              if (
+                _this.props.startOnSunday ||
+                (typeof _this.props.locale === "string" &&
+                  (_this.props.locale.toLowerCase() === "en-gb" ||
+                    _this.props.locale.toLowerCase() === "en"))
+              ) {
                 currentWeekStart.subtract(1, "day");
               }
 
