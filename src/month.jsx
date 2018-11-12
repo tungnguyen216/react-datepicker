@@ -70,10 +70,10 @@ export default class Month extends React.Component {
     var isFixedHeight = this.props.fixedHeight;
     let currentWeekStart = utils.getStartOfWeek(
       utils.getStartOfMonth(utils.cloneDate(this.props.day))
-    ).add(1, 'day');
+    );
 
-    if (this.props.startOnSunday || (typeof this.props.locale === 'string' && (this.props.locale.toLowerCase() === 'en-gb' || this.props.locale.toLowerCase() === 'en'))) {
-        currentWeekStart.subtract(1, 'day')
+    if (!this.props.startOnSunday && !(typeof this.props.locale === 'string' && (this.props.locale.toLowerCase() === 'en-gb' || this.props.locale.toLowerCase() === 'en'))) {
+        currentWeekStart.add(1, 'day')
     }
 
     let i = 0;
