@@ -22,19 +22,20 @@ export default class Default extends React.Component {
         <pre className="column example__code">
           <code className="jsx">
             {`
-<DatePicker
-    selected={this.state.startDate}
-    startOnSunday
-    placeholderText='Weeks start on Sunday'
-    onChange={this.handleChange}
-/>
-`}
+            <DatePicker
+                selected={this.state.startDate}
+                startOnSunday
+                placeholderText='Weeks start on Sunday'
+                onChange={this.handleChange}
+            />
+            `}
           </code>
         </pre>
         <div className="column">
           <DatePicker
             selected={this.state.startDate}
-            startOnSunday
+            // startOnSunday
+            locale='en-gb'
             placeholderText='Weeks starts on Sunday'
             onChange={this.handleChange}/>
         </div>
