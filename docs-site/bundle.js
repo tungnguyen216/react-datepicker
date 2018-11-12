@@ -27339,14 +27339,7 @@
               (0, _date_utils.cloneDate)(date)
             );
 
-            if (
-              !_this.props.startOnSunday &&
-              !(
-                typeof _this.props.locale === "string" &&
-                (_this.props.locale.toLowerCase() === "en-gb" ||
-                  _this.props.locale.toLowerCase() === "en")
-              )
-            ) {
+            if (!_this.props.startOnSunday) {
               startOfWeek.add(1, "day");
             }
 
@@ -49324,14 +49317,7 @@
                 utils.getStartOfMonth(utils.cloneDate(_this.props.day))
               );
 
-              if (
-                !_this.props.startOnSunday &&
-                !(
-                  typeof _this.props.locale === "string" &&
-                  (_this.props.locale.toLowerCase() === "en-gb" ||
-                    _this.props.locale.toLowerCase() === "en")
-                )
-              ) {
+              if (!_this.props.startOnSunday) {
                 currentWeekStart.add(1, "day");
               }
 

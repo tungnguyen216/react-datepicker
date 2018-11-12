@@ -293,14 +293,14 @@ export default class Calendar extends React.Component {
     );
   };
 
-  isLocaleEn = () => typeof this.props.locale === 'string' && (this.props.locale.toLowerCase() === 'en-gb' || this.props.locale.toLowerCase() === 'en')
-
   header = (date = this.state.date) => {
     let startOfWeek = getStartOfWeek(cloneDate(date))
-
+    
     if (!this.props.startOnSunday) {
       startOfWeek.add(1, 'day')
     }
+
+    console.log(startOfWeek)
 
     const dayNames = [];
     if (this.props.showWeekNumbers) {

@@ -34,7 +34,7 @@ export default class Default extends React.Component {
         <div className="column">
           <DatePicker
             selected={this.state.startDate}
-            startOnSunday
+            // startOnSunday
             locale='en'
             placeholderText='Weeks starts on Sunday'
             onChange={this.handleChange}/>
