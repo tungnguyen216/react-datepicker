@@ -26157,8 +26157,8 @@
               { className: "column" },
               _react2.default.createElement(_reactDatepicker2.default, {
                 selected: this.state.startDate,
-                // startOnSunday
-                locale: "en-gb",
+                startOnSunday: true,
+                locale: "en",
                 placeholderText: "Weeks starts on Sunday",
                 onChange: this.handleChange
               })
@@ -27337,15 +27337,17 @@
 
             var startOfWeek = (0, _date_utils.getStartOfWeek)(
               (0, _date_utils.cloneDate)(date)
-            ).add(1, "day");
+            );
 
             if (
-              _this.props.startOnSunday ||
-              (typeof _this.props.locale === "string" &&
+              !_this.props.startOnSunday &&
+              !(
+                typeof _this.props.locale === "string" &&
                 (_this.props.locale.toLowerCase() === "en-gb" ||
-                  _this.props.locale.toLowerCase() === "en"))
+                  _this.props.locale.toLowerCase() === "en")
+              )
             ) {
-              startOfWeek.subtract(1, "day");
+              startOfWeek.add(1, "day");
             }
 
             var dayNames = [];
@@ -49318,19 +49320,19 @@
             (_this.renderWeeks = function() {
               var weeks = [];
               var isFixedHeight = _this.props.fixedHeight;
-              var currentWeekStart = utils
-                .getStartOfWeek(
-                  utils.getStartOfMonth(utils.cloneDate(_this.props.day))
-                )
-                .add(1, "day");
+              var currentWeekStart = utils.getStartOfWeek(
+                utils.getStartOfMonth(utils.cloneDate(_this.props.day))
+              );
 
               if (
-                _this.props.startOnSunday ||
-                (typeof _this.props.locale === "string" &&
+                !_this.props.startOnSunday &&
+                !(
+                  typeof _this.props.locale === "string" &&
                   (_this.props.locale.toLowerCase() === "en-gb" ||
-                    _this.props.locale.toLowerCase() === "en"))
+                    _this.props.locale.toLowerCase() === "en")
+                )
               ) {
-                currentWeekStart.subtract(1, "day");
+                currentWeekStart.add(1, "day");
               }
 
               var i = 0;

@@ -72,7 +72,7 @@ export default class Month extends React.Component {
       utils.getStartOfMonth(utils.cloneDate(this.props.day))
     );
 
-    if (!this.props.startOnSunday && !(typeof this.props.locale === 'string' && (this.props.locale.toLowerCase() === 'en-gb' || this.props.locale.toLowerCase() === 'en'))) {
+    if (!this.props.startOnSunday) {
         currentWeekStart.add(1, 'day')
     }
 

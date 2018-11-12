@@ -298,7 +298,7 @@ export default class Calendar extends React.Component {
   header = (date = this.state.date) => {
     let startOfWeek = getStartOfWeek(cloneDate(date))
 
-    if (!this.props.startOnSunday && !(typeof this.props.locale === 'string' && (this.props.locale.toLowerCase() === 'en-gb' || this.props.locale.toLowerCase() === 'en'))) {
+    if (!this.props.startOnSunday) {
       startOfWeek.add(1, 'day')
     }
 
