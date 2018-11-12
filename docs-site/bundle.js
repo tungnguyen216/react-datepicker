@@ -15466,8 +15466,7 @@
     },
     /* 91 */
     /***/ function(module, exports) {
-      module.exports = function(hljs) {
-        // TODO support filter tags like :javascript, support inline HTML
+      module.exports = function(hljs) { // TODO support filter tags like :javascript, support inline HTML
         return {
           case_insensitive: true,
           contains: [
@@ -21407,8 +21406,7 @@
     },
     /* 150 */
     /***/ function(module, exports) {
-      module.exports = function(hljs) {
-        // Base deafult colors in PB IDE: background: #FFFFDF; foreground: #000000;
+      module.exports = function(hljs) { // Base deafult colors in PB IDE: background: #FFFFDF; foreground: #000000;
         var STRINGS = {
           // PB IDE color: #0080FF (Azure Radiance)
           className: "string",
@@ -26151,7 +26149,7 @@
               _react2.default.createElement(
                 "code",
                 { className: "jsx" },
-                "\n<DatePicker\n    selected={this.state.startDate}\n    onChange={this.handleChange}\n/>\n"
+                "\n            <DatePicker\n                selected={this.state.startDate}\n                startOnSunday\n                placeholderText='Weeks start on Sunday'\n                onChange={this.handleChange}\n            />\n            "
               )
             ),
             _react2.default.createElement(
@@ -26159,6 +26157,9 @@
               { className: "column" },
               _react2.default.createElement(_reactDatepicker2.default, {
                 selected: this.state.startDate,
+                // startOnSunday
+                locale: "en-gb",
+                placeholderText: "Weeks starts on Sunday",
                 onChange: this.handleChange
               })
             )
@@ -26694,6 +26695,7 @@
                 showMonthYearDropdown: _this.props.showMonthYearDropdown,
                 showWeekNumbers: _this.props.showWeekNumbers,
                 showYearDropdown: _this.props.showYearDropdown,
+                startOnSunday: _this.props.startOnSunday,
                 monthYearSlide: _this.props.monthYearSlide,
                 showMonthly: _this.props.showMonthly,
                 withPortal: _this.props.withPortal,
@@ -26945,6 +26947,7 @@
         showDisabledMonthNavigation: _propTypes2.default.bool,
         startDate: _propTypes2.default.object,
         startOpen: _propTypes2.default.bool,
+        startOnSunday: _propTypes2.default.bool,
         tabIndex: _propTypes2.default.number,
         timeCaption: _propTypes2.default.string,
         title: _propTypes2.default.string,
@@ -27326,7 +27329,12 @@
 
             var startOfWeek = (0, _date_utils.getStartOfWeek)(
               (0, _date_utils.cloneDate)(date)
-            );
+            ).add(1, "day");
+
+            if (_this.props.startOnSunday) {
+              startOfWeek.subtract(1, "day");
+            }
+
             var dayNames = [];
             if (_this.props.showWeekNumbers) {
               dayNames.push(
@@ -27771,6 +27779,7 @@
                       minYear: _this.props.minYear,
                       excludeDates: _this.props.excludeDates,
                       highlightDates: _this.props.highlightDates,
+                      locale: _this.props.locale,
                       selectingDate: _this.state.selectingDate,
                       includeDates: _this.props.includeDates,
                       inline: _this.props.inline,
@@ -27781,6 +27790,7 @@
                       selectsStart: _this.props.selectsStart,
                       selectsEnd: _this.props.selectsEnd,
                       showWeekNumbers: _this.props.showWeekNumbers,
+                      startOnSunday: _this.props.startOnSunday,
                       startDate: _this.props.startDate,
                       endDate: _this.props.endDate,
                       peekNextMonth: _this.props.peekNextMonth,
@@ -27942,6 +27952,7 @@
         showMonthYearDropdown: _propTypes2.default.bool,
         showWeekNumbers: _propTypes2.default.bool,
         showYearDropdown: _propTypes2.default.bool,
+        startOnSunday: _propTypes2.default.bool,
         monthYearSlide: _propTypes2.default.bool,
         showMonthly: _propTypes2.default.bool,
         startDate: _propTypes2.default.object,
@@ -49294,9 +49305,16 @@
             (_this.renderWeeks = function() {
               var weeks = [];
               var isFixedHeight = _this.props.fixedHeight;
-              var currentWeekStart = utils.getStartOfWeek(
-                utils.getStartOfMonth(utils.cloneDate(_this.props.day))
-              );
+              var currentWeekStart = utils
+                .getStartOfWeek(
+                  utils.getStartOfMonth(utils.cloneDate(_this.props.day))
+                )
+                .add(1, "day");
+
+              if (_this.props.startOnSunday) {
+                currentWeekStart.subtract(1, "day");
+              }
+
               var i = 0;
               var breakAfterNextPush = false;
 
@@ -49400,6 +49418,7 @@
         highlightDates: _propTypes2.default.instanceOf(Map),
         includeDates: _propTypes2.default.array,
         inline: _propTypes2.default.bool,
+        locale: _propTypes2.default.string,
         maxDate: _propTypes2.default.object,
         minDate: _propTypes2.default.object,
         onDayClick: _propTypes2.default.func,
@@ -49413,6 +49432,7 @@
         selectsEnd: _propTypes2.default.bool,
         selectsStart: _propTypes2.default.bool,
         showWeekNumbers: _propTypes2.default.bool,
+        startOnSunday: _propTypes2.default.bool,
         startDate: _propTypes2.default.object,
         utcOffset: _propTypes2.default.number,
         weeklyType: _propTypes2.default.bool,
@@ -49550,9 +49570,7 @@
               return utils.getWeek(startOfWeek);
             }),
             (_this.renderDays = function() {
-              var startOfWeek = utils.getStartOfWeek(
-                utils.cloneDate(_this.props.day)
-              );
+              var startOfWeek = utils.cloneDate(_this.props.day);
               var days = [];
               var weekNumber = _this.formatWeekNumber(startOfWeek);
               if (_this.props.showWeekNumber) {
