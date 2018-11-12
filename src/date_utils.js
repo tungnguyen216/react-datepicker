@@ -246,17 +246,17 @@ export function equals(date1, date2) {
 
 export function isSameYear(date1, date2) {
   if (date1 && date2) {
-      return date1.isSame(date2, "year");
+    return date1.isSame(date2, "year");
   } else {
-      return !date1 && !date2;
+    return !date1 && !date2;
   }
 }
 
 export function isSameMonth(date1, date2) {
   if (date1 && date2) {
-      return date1.isSame(date2, "month");
+    return date1.isSame(date2, "month");
   } else {
-      return !date1 && !date2;
+    return !date1 && !date2;
   }
 }
 
@@ -489,4 +489,16 @@ export function getHightLightDaysMap(
   }
 
   return dateClasses;
+}
+
+export function toMonday(date) {
+  if (date.format("dddd") === "Tuesday") {
+    return date.subtract(1, "day");
+  }
+
+  if (date.format("dddd") === "Sunday") {
+    return date.add(1, "day");
+  }
+
+  return date;
 }

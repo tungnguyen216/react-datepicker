@@ -34,7 +34,8 @@ import {
   allDaysDisabledBefore,
   allDaysDisabledAfter,
   getEffectiveMinDate,
-  getEffectiveMaxDate
+  getEffectiveMaxDate,
+  toMonday
 } from "./date_utils";
 
 const DROPDOWN_FOCUS_CLASSNAMES = [
@@ -101,7 +102,7 @@ export default class Calendar extends React.Component {
     showMonthYearDropdown: PropTypes.bool,
     showWeekNumbers: PropTypes.bool,
     showYearDropdown: PropTypes.bool,
-    startOnSunday: PropTypes.bool,
+    startOnMonday: PropTypes.bool,
     monthYearSlide: PropTypes.bool,
     showMonthly: PropTypes.bool,
     startDate: PropTypes.object,
@@ -296,11 +297,9 @@ export default class Calendar extends React.Component {
   header = (date = this.state.date) => {
     let startOfWeek = getStartOfWeek(cloneDate(date))
     
-    if (!this.props.startOnSunday) {
-      startOfWeek.add(1, 'day')
+    if (this.props.startOnMonday) {
+      toMonday(startOfWeek)
     }
-
-    console.log(startOfWeek)
 
     const dayNames = [];
     if (this.props.showWeekNumbers) {
@@ -622,7 +621,7 @@ export default class Calendar extends React.Component {
             selectsStart={this.props.selectsStart}
             selectsEnd={this.props.selectsEnd}
             showWeekNumbers={this.props.showWeekNumbers}
-            startOnSunday={this.props.startOnSunday}
+            startOnMonday={this.props.startOnMonday}
             startDate={this.props.startDate}
             endDate={this.props.endDate}
             peekNextMonth={this.props.peekNextMonth}

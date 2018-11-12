@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import Week from "./week";
 import * as utils from "./date_utils";
+import { toMonday } from "./date_utils";
 
 const FIXED_HEIGHT_STANDARD_WEEK_COUNT = 6;
 
@@ -32,7 +33,7 @@ export default class Month extends React.Component {
     selectsEnd: PropTypes.bool,
     selectsStart: PropTypes.bool,
     showWeekNumbers: PropTypes.bool,
-    startOnSunday: PropTypes.bool,
+    startOnMonday: PropTypes.bool,
     startDate: PropTypes.object,
     utcOffset: PropTypes.number,
     weeklyType: PropTypes.bool,
@@ -72,8 +73,8 @@ export default class Month extends React.Component {
       utils.getStartOfMonth(utils.cloneDate(this.props.day))
     );
 
-    if (!this.props.startOnSunday) {
-        currentWeekStart.add(1, 'day')
+    if (this.props.startOnMonday) {
+      toMonday(currentWeekStart);
     }
 
     let i = 0;
