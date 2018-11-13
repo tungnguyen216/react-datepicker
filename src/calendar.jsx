@@ -298,7 +298,7 @@ export default class Calendar extends React.Component {
     let startOfWeek = getStartOfWeek(cloneDate(date))
     
     if (this.props.startOnMonday) {
-      toMonday(startOfWeek)
+      startOfWeek = toMonday(startOfWeek)
     }
 
     const dayNames = [];

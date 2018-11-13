@@ -74,7 +74,7 @@ export default class Month extends React.Component {
     );
 
     if (this.props.startOnMonday) {
-      toMonday(currentWeekStart);
+      currentWeekStart = toMonday(currentWeekStart);
     }
 
     let i = 0;

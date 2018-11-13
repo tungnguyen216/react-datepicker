@@ -492,11 +492,21 @@ export function getHightLightDaysMap(
 }
 
 export function toMonday(date) {
-  if (date.format("dddd") === "Tuesday") {
+  const dayName = date.format("ddd");
+
+  if (dayName === "Tue") {
     return date.subtract(1, "day");
   }
 
-  if (date.format("dddd") === "Sunday") {
+  if (dayName === "Wed") {
+    return date.subtract(2, "days");
+  }
+
+  if (dayName === "Sat") {
+    return date.add(2, "days");
+  }
+
+  if (dayName === "Sun") {
     return date.add(1, "day");
   }
 

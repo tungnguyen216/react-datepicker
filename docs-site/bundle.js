@@ -26149,7 +26149,7 @@
               _react2.default.createElement(
                 "code",
                 { className: "jsx" },
-                "\n            <DatePicker\n                selected={this.state.startDate}\n                startOnSunday\n                placeholderText='Weeks start on Sunday'\n                onChange={this.handleChange}\n            />\n            "
+                "\n            <DatePicker\n                selected={this.state.startDate}\n                startOnMonday\n                placeholderText='Weeks start on Sunday'\n                onChange={this.handleChange}\n            />\n            "
               )
             ),
             _react2.default.createElement(
